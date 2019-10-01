@@ -1,0 +1,38 @@
+Welcome to Wisconsin State Trivia!
+[Wisconsin is bordered by what US State to the west?]
+Minnesota
+Minnesota
+[Where is the state capital located in Wisconsin?]
+Madison
+Madison
+[What is the name of the professional football team in Wisconsin?]
+The Green Bay Packers
+The Green Bay Packers
+[Who is the current governor of Wisconsin?]
+Tony Evers
+Tony Evers
+[What state borders Wisconsin to the southwest?]
+Iowa
+Iowa
+[What is the Wisconsin State Dance?]
+Polka
+Polka
+[What is the Wisconsin State Nickname?]
+Badger State
+Badger State
+[Which U.S. state borders Wisconsin to the south?]
+Illinois
+Illinois
+[What is the Wisconsin State Beverage?]
+Milk
+Milk
+[Which body of water  borders Wisconsin to the east?]
+Lake Michigan
+Lake Michigan
+[What American state borders Wisconsin to the northeast?]
+Michigan
+Michigan
+[The state of Wisconsin has more country music "what" than any other state?]
+Festivals
+Festivals
+Thanks for taking the quiz. Your answers have been saved to file_output.txt

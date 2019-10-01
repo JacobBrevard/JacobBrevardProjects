@@ -1,88 +1,65 @@
-/**
- * This class contains the constants used in the Soko-Ban program. These
- * constants may be changed when testing. So, your program should use the
- * constants, not the values.
- * 
- * @author Marc Renault
- */
+///////////////////////////////////////////////////////////////////////////////
+// Config.java Fall 2018
+//
+// This file contains constants used within your Eliza program.
+// This file will not be handed in, because testing Config.java files will 
+// be used to test your program. Your code must reference these constant 
+// values by the names defined below and not the values themselves.
+//
+///////////////////////////////////////////////////////////////////////////////
+
 public class Config {
 
 	/**
-	 * Character values for displaying the different statuses of the game board
-	 * cells.
+	 * A debugging technique is to add statements like the following at key places
+	 * in your program: if (Config.DEBUG) { System.out.println("value=" + value); }
+	 * Then you can turn on or off all these statements simply by changing the value
+	 * of DEBUG here.
 	 */
-	public static final char EMPTY_CHAR = ' '; // Empty character
-	public static final char BOX_CHAR = '='; // Box character
-	public static final char WALL_CHAR = '#'; // Wall character
-	public static final char WORKER_CHAR = '@'; // Worker character
-	public static final char GOAL_CHAR = '.'; // Worker character
-	public static final char BOX_GOAL_CHAR = '*'; // Box on a goal character
-	public static final char WORK_GOAL_CHAR = '+'; // Worker on a goal character
+	static final boolean DEBUG = false;
 
 	/**
-	 * Constants for the random processes.
+	 * The filename extension for files with lists of key words and responses.
 	 */
-	public static final long SEED = 1234; // The random seed
+	static final String RESPONSE_FILE_EXTENSION = ".rsp";
 
 	/**
-	 * Initial configuration of the levels. Note that we are using the actual
-	 * characters to make it easier to visualize the initial configurations, but it
-	 * would be better to use the character constants defined above.
+	 * If the user input contains any of these words in their own phrase then Eliza
+	 * ends.
 	 */
-	public static final char[][][] LEVELS = { {
-			// {' ', ' ', ' ', ' ', ' '},
-			// {' ', ' ', ' ', ' ', ' '},
-			// {' ', ' ', ' ', '=', ' '},
-			// {' ', ' ', ' ', ' ', ' '},
-			// {' ', ' ', ' ', ' ', '@'}
-			{ EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR },
-			{ EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR },
-			{ EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, BOX_CHAR, EMPTY_CHAR },
-			{ EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR },
-			{ EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, WORKER_CHAR }
+	static final String[] QUIT_WORDS = { "bye", "goodbye", "quit", "seeya" };
 
-			}, {
-					// {' ', ' ', ' ', '#', ' ', ' ', ' '},
-					// {' ', ' ', ' ', '#', '=', ' ', ' '},
-					// {' ', '#', '#', '#', ' ', ' ', '='},
-					// {' ', '#', ' ', ' ', '=', ' ', '=', ' '},
-					// {'#', '#', ' ', '#', ' ', '#', '#', ' ', '#', ' ', ' ', ' ', '#', '#', '#',
-					// '#', '#'},
-					// {' ', ' ', ' ', '#', ' ', '#', '#', ' ', '#', '#', '#', '#', '#', ' ', ' ', '
-					// ', ' '},
-					// {' ', '=', ' ', ' ', '=', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '
-					// ', ' '},
-					// {'#', '#', '#', '#', ' ', '#', '#', '#', ' ', '#', '@', '#', '#', ' ', ' ', '
-					// ', ' '},
-					// {' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', '#', '#', '#', '#', '#', '#',
-					// '#', '#'}
-					{ EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, WALL_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR },
-					{ EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, WALL_CHAR, BOX_CHAR, EMPTY_CHAR, EMPTY_CHAR },
-					{ EMPTY_CHAR, WALL_CHAR, WALL_CHAR, WALL_CHAR, EMPTY_CHAR, EMPTY_CHAR, BOX_CHAR },
-					{ EMPTY_CHAR, WALL_CHAR, EMPTY_CHAR, EMPTY_CHAR, BOX_CHAR, EMPTY_CHAR, BOX_CHAR, EMPTY_CHAR },
-					{ WALL_CHAR, WALL_CHAR, EMPTY_CHAR, WALL_CHAR, EMPTY_CHAR, WALL_CHAR, WALL_CHAR, EMPTY_CHAR,
-							WALL_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, WALL_CHAR, WALL_CHAR, WALL_CHAR, WALL_CHAR,
-							WALL_CHAR },
-					{ EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, WALL_CHAR, EMPTY_CHAR, WALL_CHAR, WALL_CHAR, EMPTY_CHAR,
-							WALL_CHAR, WALL_CHAR, WALL_CHAR, WALL_CHAR, WALL_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR,
-							EMPTY_CHAR },
-					{ EMPTY_CHAR, BOX_CHAR, EMPTY_CHAR, EMPTY_CHAR, BOX_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR,
-							EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR,
-							EMPTY_CHAR, EMPTY_CHAR },
-					{ WALL_CHAR, WALL_CHAR, WALL_CHAR, WALL_CHAR, EMPTY_CHAR, WALL_CHAR, WALL_CHAR, WALL_CHAR,
-							EMPTY_CHAR, WALL_CHAR, WORKER_CHAR, WALL_CHAR, WALL_CHAR, EMPTY_CHAR, EMPTY_CHAR,
-							EMPTY_CHAR, EMPTY_CHAR },
-					{ EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, WALL_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR, EMPTY_CHAR,
-							EMPTY_CHAR, WALL_CHAR, WALL_CHAR, WALL_CHAR, WALL_CHAR, WALL_CHAR, WALL_CHAR, WALL_CHAR,
-							WALL_CHAR }
+	/**
+	 * In user input, if the first word is found it is replaced with the second
+	 * word. For example "i'm" is replaced with "i am".
+	 */
+	static final String[][] INPUT_WORD_MAP = {
+			// from => to
+			{ "dont", "don't" }, { "cant", "cannot" }, { "can't", "cannot" }, { "want", "desire" },
+			{ "need", "desire" }, { "noone", "nobody" }, { "everybody", "everyone" },
+			{ "wont", "won't" }, { "recollect", "remember" }, { "dreamt", "dreamed" },
+			{ "dreams", "dream" }, { "maybe", "perhaps" }, { "how", "what" }, { "when", "what" },
+			{ "certainly", "yes" }, { "machine", "computer" }, { "computers", "computer" },
+			{ "were", "was" }, { "you're", "you are" }, { "i'm", "i am" }, { "same", "alike" },
+			{ "sorry", "apologize" }, { "aren't", "are not" }, { "mom", "mother" },
+			{ "dad", "father" } };
 
-			} };
+	/**
+	 * Pronoun pairs for echoing phrases back to a user.
+	 */
+	static final String[][] PRONOUN_MAP = { { "am", "are" }, { "your", "my" }, { "me", "you" },
+			{ "myself", "yourself" }, { "yourself", "myself" }, { "i", "you" }, { "you", "I" },
+			{ "my", "your" }, { "i'm", "you are" } };
 
-	public static final int[][] GOALS = { { 2, 2 }, { 5, 15, 5, 16, 6, 15, 6, 16, 7, 15, 7, 16 } };
+	/**
+	 * When the user input doesn't match any of the keyword patterns in the response
+	 * table then this response is selected.
+	 */
+	static final String NO_MATCH_RESPONSE = "Please go on.";
 
-	public static final char UP_CHAR = '8';
-	public static final char DOWN_CHAR = '2';
-	public static final char LEFT_CHAR = '4';
-	public static final char RIGHT_CHAR = '6';
-	public static final char QUIT_CHAR = 'q';
+	/**
+	 * Some responses are randomly chosen from a list. This seed is used to make
+	 * those choices reproducible for testing purposes.
+	 */
+	static final int SEED = 123;
 }
