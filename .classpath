@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="AP CS A - Game Of War/src"/>
+	<classpathentry kind="src" path="AP CS A - Recursion/src"/>
+	<classpathentry kind="src" path="CS 200 - Fibonacci/src"/>
+	<classpathentry kind="src" path="CS 200 - Rectangle/src"/>
+	<classpathentry kind="src" path="CS 200 BP1 Sokoban/src"/>
+	<classpathentry kind="src" path="CS 200 BP2 Eliza/src"/>
+	<classpathentry kind="src" path="CS 200 Chapter 5 Programs/src"/>
+	<classpathentry kind="src" path="CS 200 Chapter 6 Programs/src"/>
+	<classpathentry kind="src" path="CS 200 Chapter 7 Programs/src"/>
+	<classpathentry kind="src" path="CS 200 Final Exam Review/src"/>
+	<classpathentry kind="src" path="CS 300 Chapter 1 Shopping Cart/src"/>
+	<classpathentry kind="src" path="CS 300 Chapter 2 Particle Fountain/src"/>
+	<classpathentry kind="src" path="CS 300 Chapter 3 Book Library/src"/>
+	<classpathentry kind="src" path="CS 300 Chapter 4 Exceptional Book Library/src"/>
+	<classpathentry kind="src" path="CS 300 Chapter 5 Escape Room/src"/>
+	<classpathentry kind="src" path="CS 300 Chapter 6 Storage Unit Organizer/src"/>
+	<classpathentry kind="src" path="CS 300 Chapter 7 Iterating To Philosophy/src"/>
+	<classpathentry kind="src" path="CS 300 Chapter 8 Dessert Queue/src"/>
+	<classpathentry kind="src" path="CS 300 Chapter 9 Dictionary Using BST/src"/>
+	<classpathentry kind="src" path="CS 300 Project Source Code/CHP 1 Assignment Shopping Cart"/>
+	<classpathentry kind="src" path="CS 300 Project Source Code/CHP 2 Assignment Particle Fountain"/>
+	<classpathentry kind="src" path="CS 300 Project Source Code/CHP 3 Book Library Project"/>
+	<classpathentry kind="src" path="CS 300 Project Source Code/CHP 4 Exceptional Book Library Project"/>
+	<classpathentry kind="src" path="CS 300 Project Source Code/CHP 5 Escape Room"/>
+	<classpathentry kind="src" path="CS 300 Project Source Code/CHP 6 Storge Unit Organizer"/>
+	<classpathentry kind="src" path="CS 300 Project Source Code/CHP 7 Iterating To Philosophy"/>
+	<classpathentry kind="src" path="CS 300 Project Source Code/CHP 8 Dessert Queue"/>
+	<classpathentry kind="src" path="CS 300 Project Source Code/CHP 9 Dictionary BST"/>
+	<classpathentry kind="src" path="ExamReview/src"/>
+	<classpathentry kind="src" path="Practice Technical Interview Coding Problems/src"/>
+	<classpathentry kind="src" path="Program 0 Scanner Pracitce"/>
+	<classpathentry kind="src" path="Program 1 Test ADT"/>
+	<classpathentry kind="src" path="Texas Holdem Blinds Schedule/src"/>
+	<classpathentry kind="lib" path="CS 300 Chapter 2 Particle Fountain/P2ParticleFountain.jar"/>
+	<classpathentry kind="lib" path="CS 300 Chapter 5 Escape Room/core.jar"/>
+	<classpathentry kind="lib" path="CS 300 Chapter 6 Storage Unit Organizer/core.jar"/>
+	<classpathentry kind="lib" path="CS 300 Chapter 7 Iterating To Philosophy/jsoup-1.10.3.jar"/>
+	<classpathentry kind="output" path="AP CS A - Game Of War/bin"/>
+</classpath>
