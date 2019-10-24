@@ -782,6 +782,11 @@ public class BALST<K extends Comparable<K>, V> extends BSTNode<K, V> implements 
     return currentNode;
   }
 
+  public boolean remove(K key, V value) throws IllegalNullKeyException, KeyNotFoundException {
+    return isBlack;
+
+  }
+
   @Override
   /**
    * If key is found, remove the key,value pair from the data structure and decrease num keys. If

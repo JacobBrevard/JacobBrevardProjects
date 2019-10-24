@@ -264,6 +264,8 @@ public class BALSTTest {
       balst2.insert(12, "Tomato");
       balst2.insert(99, "Tomato");
       balst2.insert(63, "Tomato");
+      
+      balst2.print();
 
 
       if (balst2.getKeyOfLeftChildOf(13) != 12) {
