@@ -77,7 +77,6 @@ public class BookHashTableTest {
   /** Initialize empty hash table to be used in each test */
   @BeforeEach
   public void setUp() throws Exception {
-    // TODO: change HashTable for final solution
     bookObject = new BookHashTable(INIT_CAPACITY, LOAD_FACTOR);
   }
 
